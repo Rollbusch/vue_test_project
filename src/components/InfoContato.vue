@@ -17,10 +17,10 @@ import WhatsappIcon from './icons/IconWhatsapp.vue'
 
   <Container>
     <div class="contato">
-      <div class="icon">
-        <WhatsappIcon />
-      </div>
       <a target="_blank" href="https://wa.link/jdg8bw">
+        <div class="icon">
+          <WhatsappIcon />
+        </div>
         <h3>
           WhatsApp
         </h3>
@@ -30,10 +30,10 @@ import WhatsappIcon from './icons/IconWhatsapp.vue'
 
   <Container>
     <div class="contato">
-      <div class="icon">
-        <LinkedinIcon />
-      </div>
       <a target="_blank" href="https://www.linkedin.com/in/jo%C3%A3o-rollbusch-304534193/">
+        <div class="icon">
+          <LinkedinIcon />
+        </div>
         <h3>
           Linkedin
         </h3>
@@ -50,10 +50,10 @@ import WhatsappIcon from './icons/IconWhatsapp.vue'
   
   <Container>
     <div class="contato">
-      <div class="icon">
-        <GithubIcon />
-      </div>
       <a target="_blank" href="https://github.com/Rollbusch/">
+        <div class="icon">
+          <GithubIcon />
+        </div>
         <h3>
           Github
         </h3>
@@ -63,10 +63,10 @@ import WhatsappIcon from './icons/IconWhatsapp.vue'
 
   <Container>
     <div class="contato">
-      <div class="icon">
-        <UnityIcon />
-      </div>
       <a target="_blank" href="https://learn.unity.com/u/668e0b36edbc2a78d2ebf09e?tab=profile">
+        <div class="icon">
+          <UnityIcon />
+        </div>
         <h3>
           Unity
         </h3>
@@ -91,6 +91,13 @@ strong {
   align-items: center;
   margin-bottom: 1.5rem;
   cursor: pointer;
+}
+
+
+.contato a {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
 }
 
 .contato h3 {
