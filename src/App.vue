@@ -1,20 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <RouterView />
   </main>
+
 </template>
 
 <style scoped>
@@ -27,7 +19,16 @@ header {
   margin: 0 auto 2rem;
 }
 
+main {
+  padding: 0 0 60px;
+}
+
 @media (min-width: 1024px) {
+
+  main {
+    padding: 60px 0;
+  }
+
   header {
     display: flex;
     place-items: center;

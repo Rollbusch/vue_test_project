@@ -1,15 +1,27 @@
+<script setup>
+defineProps({
+  url: {
+    type: String,
+    required: true
+  }
+})
+</script>
+
 <template>
-  <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
-    <div class="details">
-      <h3>
-        <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
+  <RouterLink :to="url">
+    <div class="item">
+        <i>
+          <slot name="icon"></slot>
+        </i>
+      
+      <div class="details">
+        <h3>
+          <slot name="heading"></slot>
+        </h3>
+        <slot></slot>
+      </div>
     </div>
-  </div>
+  </RouterLink>
 </template>
 
 <style scoped>
@@ -22,6 +34,7 @@
 .details {
   flex: 1;
   margin-left: 1rem;
+  color: var(--color-text)
 }
 
 i {
@@ -41,6 +54,10 @@ h3 {
   color: var(--color-heading);
 }
 
+routerlink {
+  cursor: pointer;
+}
+
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
@@ -49,7 +66,7 @@ h3 {
 
   i {
     top: calc(50% - 25px);
-    left: -26px;
+    left: 15px;
     position: absolute;
     border: 1px solid var(--color-border);
     background: var(--color-background);
